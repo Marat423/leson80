@@ -18,10 +18,14 @@ from tempfile import template
 
 from django.contrib import admin
 from django.urls import path
-from task2.views import func_example, class_example
+#from task2.views import func_template, TemplateClass
+from task3.views import cart, games, platform
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', func_example),
-    path('index/', class_example.as_view())
+    # path('', func_template),
+    # path('class_template/', TemplateClass.as_view())
+    path('platform/', platform),
+    path('games/', games),
+    path('cart/', cart),
 ]
